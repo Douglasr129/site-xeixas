@@ -14,14 +14,23 @@ interface LinksProps {
 	 * Conteudo do componente.
 	 */
 	children: ReactNode;
+	/**
+	 * Conteudo do componente.
+	 */
+	dark?: boolean;
 }
 /**
  * Componente link padrão para o menu.
  */
-export const Links = ({ link, newTab = false, children }: LinksProps) => {
+export const Links = ({
+	link,
+	newTab = false,
+	dark = false,
+	children,
+}: LinksProps) => {
 	const target = newTab ? '_blank' : '_self';
 	return (
-		<Styled.Container href={link} target={target}>
+		<Styled.Container href={link} target={target} dark={dark}>
 			{children}
 		</Styled.Container>
 	);
