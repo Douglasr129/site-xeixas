@@ -1,11 +1,19 @@
 /* eslint-disable quotes */
 export const theme = {
-	colors: {
-		primaryColor: '#0a1128',
-		secondaryColor: '#dc143c',
+	Colors: {
+		primary: '#7395B8',
+		secondary: '#dc143c',
+		action: '#81AE85',
 		white: '#FFFFFF',
-		mediumGray: '#DDDDDD',
-		darkColor: '#2d2d2d',
+		medium: '#E3DEFF',
+		dark: '#161421',
+	},
+	actionsColors: {
+		primary: '#4B9DB8',
+		secondary: '#AD1E02',
+		action: '#4CAD70',
+		medium: '#B77BB8',
+		dark: '#10009E',
 	},
 	font: {
 		family: {
