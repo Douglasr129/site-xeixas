@@ -8,7 +8,7 @@
 		[
 			"babel-plugin-styled-components",
 			{
-				"ssr": false
+				"ssr": true
 			},
 			"@babel/plugin-proposal-do-expressions"
 		]

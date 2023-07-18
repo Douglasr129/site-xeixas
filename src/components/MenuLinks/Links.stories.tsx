@@ -18,5 +18,5 @@ export default meta;
 type Story = StoryObj<typeof Links>;
 
 export const Primary: Story = {
-	args: { link: 'asdasdasdas', children: 'Teste' },
+	args: { link: 'https://www.google.com.br/', children: 'Teste' },
 };

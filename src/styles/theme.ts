@@ -1,6 +1,6 @@
 /* eslint-disable quotes */
 export const theme = {
-	Colors: {
+	colors: {
 		primary: '#7395B8',
 		secondary: '#dc143c',
 		action: '#81AE85',
