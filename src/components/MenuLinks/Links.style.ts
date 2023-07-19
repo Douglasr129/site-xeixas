@@ -11,8 +11,12 @@ export const Container = styled.a<StyleProps>`
       padding: 1rem;
       margin: 1rem;
       text-decoration: none;
-      color: ${dark ? theme.colors.white : '#000'};
+      color: ${dark ? theme.colors.white : theme.colors.dark};
       text-align: center;
+
+			&:hover{
+				border-bottom: solid 0.2rem ${theme.colors.secondary};
+			}
     `;
 	}}
 `;

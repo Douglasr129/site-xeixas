@@ -36,6 +36,7 @@
 		"@storybook/preset-typescript": "^3.0.0",
 		"@storybook/react": "^7.1.0",
 		"@storybook/testing-library": "^0.2.0",
+		"@testing-library/jest-dom": "^5.17.0",
 		"@testing-library/react": "^14.0.0",
 		"@typescript-eslint/eslint-plugin": "^5.60.1",
 		"@typescript-eslint/parser": "^5.60.1",

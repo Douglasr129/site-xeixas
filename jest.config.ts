@@ -21,7 +21,17 @@ export default {
 	collectCoverage: true,
 
 	// An array of glob patterns indicating a set of files for which coverage information should be collected
-	// collectCoverageFrom: undefined,
+	collectCoverageFrom: [
+		'src/**/*.{js,jsx,ts,tsx}',
+		'!<rootDir>/src/*.{js,jsx,ts,tsx}',
+		'!<rootDir>/src/**/*mock*.{js,jsx,ts,tsx}',
+		'!<rootDir>/src/styles/**/*.{js,jsx,ts,tsx}',
+		'!<rootDir>/src/config/**/*.{js,jsx,ts,tsx}',
+		'!<rootDir>/src/pages/**/*.{js,jsx,ts,tsx}',
+		'!<rootDir>/**/*.stories.{js,jsx,ts,tsx}',
+		'!<rootDir>/src/templates/**/*.{js,jsx,ts,tsx}',
+		'!<rootDir>/node_modules/',
+	],
 
 	// The directory where Jest should output its coverage files
 	coverageDirectory: 'coverage',
@@ -136,7 +146,7 @@ export default {
 	// setupFiles: [],
 
 	// A list of paths to modules that run some code to configure or set up the testing framework before each test
-	// setupFilesAfterEnv: [],
+	setupFilesAfterEnv: ['<rootDir>/.jest/setup-tests.js'],
 
 	// The number of seconds after which a test is considered as slow and reported as such in the results.
 	// slowTestThreshold: 5,
@@ -145,7 +155,7 @@ export default {
 	// snapshotSerializers: [],
 
 	// The test environment that will be used for testing
-	// testEnvironment: "jest-environment-node",
+	testEnvironment: 'jsdom',
 
 	// Options that will be passed to the testEnvironment
 	// testEnvironmentOptions: {},
@@ -154,16 +164,10 @@ export default {
 	// testLocationInResults: false,
 
 	// The glob patterns Jest uses to detect test files
-	// testMatch: [
-	//   "**/__tests__/**/*.[jt]s?(x)",
-	//   "**/?(*.)+(spec|test).[tj]s?(x)"
-	// ],
+	testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
 
 	// An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-	// testPathIgnorePatterns: [
-	//   "\\\\node_modules\\\\"
-	// ],
-
+	testPathIgnorePatterns: ['/node_modules/', '/.next/', '/.out/', '/public/'],
 	// The regexp pattern or array of patterns that Jest uses to detect test files
 	// testRegex: [],
 

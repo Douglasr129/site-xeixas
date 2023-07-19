@@ -12,11 +12,29 @@ const meta: Meta<typeof Links> = {
 	argTypes: {
 		children: { type: 'string' },
 	},
+	parameters: {
+		backgrounds: {
+			default: 'light',
+		},
+	},
 };
 
 export default meta;
 type Story = StoryObj<typeof Links>;
 
-export const Primary: Story = {
-	args: { link: 'https://www.google.com.br/', children: 'Teste' },
+export const Light: Story = {
+	args: { link: 'https://www.google.com.br/', children: 'Teste', dark: false },
+	parameters: {
+		backgrounds: {
+			default: 'light',
+		},
+	},
+};
+export const Dark: Story = {
+	args: { link: 'https://www.google.com.br/', children: 'Teste', dark: true },
+	parameters: {
+		backgrounds: {
+			default: 'dark',
+		},
+	},
 };
