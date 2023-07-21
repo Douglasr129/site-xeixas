@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import styled, { css, useTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 type StyleProps = {
-	dark: boolean;
+	dark?: boolean;
 };
 
 export const Container = styled.a<StyleProps>`

@@ -23,7 +23,11 @@ export default meta;
 type Story = StoryObj<typeof Links>;
 
 export const Light: Story = {
-	args: { link: 'https://www.google.com.br/', children: 'Teste', dark: false },
+	args: {
+		link: 'https://www.google.com.br/',
+		children: 'Teste',
+		darkMode: false,
+	},
 	parameters: {
 		backgrounds: {
 			default: 'light',
@@ -31,7 +35,11 @@ export const Light: Story = {
 	},
 };
 export const Dark: Story = {
-	args: { link: 'https://www.google.com.br/', children: 'Teste', dark: true },
+	args: {
+		link: 'https://www.google.com.br/',
+		children: 'Teste',
+		darkMode: true,
+	},
 	parameters: {
 		backgrounds: {
 			default: 'dark',

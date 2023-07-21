@@ -17,7 +17,7 @@ interface LinksProps {
 	/**
 	 * Conteudo do componente.
 	 */
-	dark?: boolean;
+	darkMode?: boolean;
 }
 /**
  * Componente link padrão para o menu.
@@ -25,12 +25,18 @@ interface LinksProps {
 export const Links = ({
 	link,
 	newTab = false,
-	dark = false,
+	darkMode = false,
 	children,
+	...props
 }: LinksProps) => {
 	const target = newTab ? '_blank' : '_self';
 	return (
-		<Styled.Container href={link} target={target} dark={dark}>
+		<Styled.Container
+			href={link}
+			target={target}
+			dark={darkMode ? true : undefined}
+			{...props}
+		>
 			{children}
 		</Styled.Container>
 	);
