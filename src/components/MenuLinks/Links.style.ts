@@ -1,21 +1,22 @@
+/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 type StyleProps = {
-	dark?: boolean;
+	darkMode?: boolean; // Use 'darkMode' como propriedade CSS
 };
 
 export const Container = styled.a<StyleProps>`
-  ${({ theme, dark }) => {
+  ${({ theme, darkMode }) => {
 		return css`
       padding: 1rem;
       margin: 1rem;
       text-decoration: none;
-      color: ${dark ? theme.colors.white : theme.colors.dark};
+      color: ${darkMode ? theme.colors.white : theme.colors.dark};
       text-align: center;
 
-			&:hover{
-				border-bottom: solid 0.2rem ${theme.colors.secondary};
-			}
+      &:hover {
+        border-bottom: solid 0.2rem ${theme.colors.secondary};
+      }
     `;
 	}}
 `;

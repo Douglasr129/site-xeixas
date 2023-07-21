@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
-//import { theme } from '../../styles/theme';
+import { theme } from '../../styles/theme';
 import { Links } from '.';
 import React from 'react';
 
@@ -33,20 +33,30 @@ describe('<Links />', () => {
 		);
 	});
 	it('should render in dark mode', () => {
+		renderTheme(
+			<Links link="http://localhost" darkMode={true}>
+				Children
+			</Links>,
+		);
+
+		const linkElement = screen.getByText('Children');
+		expect(linkElement).toHaveAttribute('data-dark', 'true');
+
+		const computedStyle = window.getComputedStyle(linkElement);
+		const color = computedStyle.getPropertyValue('color');
+
+		console.log('computedStyle:', computedStyle);
+		console.log('color:', color);
+
+		expect(color).toBe(theme.colors.white);
+	});
+	/* 	it('should render in dark mode', () => {
 		const { container } = renderTheme(
 			<Links link="http://localhost" darkMode={true}>
 				Children
 			</Links>,
 		);
-		expect(container.firstChild).toHaveStyle({ margin: '1px' });
-	});
-
-	/* 	it('should render open in a new tab', () => {
-		const { container } = renderTheme(
-			<Links link="http://localhost" newTab={false}>
-				Children
-			</Links>,
-		);
-		expect(container.firstChild).toMatchInlineSnapshot();
+		console.log('Style:', container.firstChild);
+		expect(container.firstChild).toHaveStyle({ color: theme.colors.white });
 	}); */
 });
