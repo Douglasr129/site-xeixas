@@ -9,7 +9,8 @@
 		"lint": "next lint",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
-		"test": "jest"
+		"test": "jest",
+		"test:watch": "npm test --watch"
 	},
 	"dependencies": {
 		"@babel/plugin-proposal-do-expressions": "^7.22.5",
@@ -52,8 +53,6 @@
 		"jest-environment-jsdom": "^29.6.1",
 		"jest-styled-components": "^7.1.1",
 		"prettier": "^2.8.8",
-		"storybook": "^7.1.0",
-		"ts-jest": "^29.1.1",
-		"ts-node": "^10.9.1"
+		"storybook": "^7.1.0"
 	}
 }

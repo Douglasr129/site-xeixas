@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import * as Styled from './Links.style';
 
-interface LinksProps {
+export interface LinksProps {
 	link: string;
 	newTab?: boolean;
 	children: ReactNode;
@@ -21,7 +21,7 @@ export const Links = ({
 		<Styled.Container
 			href={link}
 			target={target}
-			data-dark={darkMode ? 'true' : 'false'} // Use data attribute with string value
+			$darkMode={darkMode} // Use data attribute with string value
 			{...props}
 		>
 			{children}
