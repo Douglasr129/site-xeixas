@@ -6,8 +6,8 @@ type StyleProps = {
 };
 
 export const Container = styled.a<StyleProps>`
-	padding: 1rem;
-	margin: 1rem;
+	padding: ${(props) => props.theme.paddings.xsmall};
+	margin: ${(props) => props.theme.spacings.xsmall};
 	text-decoration: none;
 	color: ${(props) => (props.$darkMode ? props.theme.colors.white : props.theme.colors.dark)};
 	text-align: center;

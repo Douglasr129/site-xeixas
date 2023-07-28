@@ -11,18 +11,18 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     font-size: 1.6rem;
-    font-family: ${({ theme }) => theme.font.family.default};
+    font-family: ${({ theme }) => theme.fonts.family.default};
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: ${({ theme }) => theme.font.family.secundary};
-		margin: ${({ theme }) => theme.spacing.large} 0;
+    font-family: ${({ theme }) => theme.fonts.family.secundary};
+		margin: ${({ theme }) => theme.spacings.large} 0;
 	}
 	p {
-    margin: ${({ theme }) => theme.spacing.medium} 0;
+    margin: ${({ theme }) => theme.spacings.medium} 0;
   }
   ul, ol {
-    margin: ${({ theme }) => theme.spacing.medium};
-    padding: ${({ theme }) => theme.spacing.medium};
+    margin: ${({ theme }) => theme.spacings.medium};
+    padding: ${({ theme }) => theme.spacings.medium};
   }
   a {
     color: ${({ theme }) => theme.colors.secondaryColor};

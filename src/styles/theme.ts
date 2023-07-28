@@ -15,7 +15,7 @@ export const theme = {
 		medium: '#B77BB8',
 		dark: '#10009E',
 	},
-	font: {
+	fonts: {
 		family: {
 			default: "'Open Sans', sans-serif",
 			secundary: "'Montserrat',sans-serif",
@@ -31,10 +31,26 @@ export const theme = {
 			xhuge: '6.4rem',
 		},
 	},
-	media: {
-		lteMedium: '(max-width: 768px)',
+	medias: {
+		mobileS: '(max-width: 320px)',
+		mobileM: '(max-width: 375px)',
+		mobileL: '(max-width: 425px)',
+		tablet: '(max-width: 768px)',
+		laptop: '(max-width: 1024px)',
+		laptopL: '(max-width: 1440px)',
+		desktop: '(max-width: 2560px)',
 	},
-	spacing: {
+	spacings: {
+		xsmall: '0.8rem',
+		small: '1.6rem',
+		medium: '2.4rem',
+		large: '3.2rem',
+		xlarge: '4.0rem',
+		xxlarge: '4.8rem',
+		huge: '5.6rem',
+		xhuge: '6.4rem',
+	},
+	paddings: {
 		xsmall: '0.8rem',
 		small: '1.6rem',
 		medium: '2.4rem',

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Links /> should have snepshot 1`] = `
+.c0 {
+  padding: 0.8rem;
+  margin: 0.8rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.c0:hover {
+  border-bottom: solid 0.2rem #dc143c;
+}
+
+<a
+  class="c0"
+  href="http://localhost"
+  target="_self"
+>
+  Children
+</a>
+`;

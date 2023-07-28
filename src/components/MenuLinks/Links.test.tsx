@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
 import { theme } from '../../styles/theme';
 import { Links } from '.';
-import React from 'react';
 
 describe('<Links />', () => {
 	it('should render a link', () => {
@@ -41,13 +40,13 @@ describe('<Links />', () => {
 		const textComponent = screen.getByText('Children');
 		expect(textComponent).toHaveStyleRule('color', theme.colors.white);
 	});
-	/* 	it('should render in dark mode', () => {
-		const { container } = renderTheme(
-			<Links link="http://localhost" darkMode={true}>
+	it('should have snepshot', () => {
+		renderTheme(
+			<Links darkMode={true} link="http://localhost">
 				Children
 			</Links>,
 		);
-		console.log('Style:', container.firstChild);
-		expect(container.firstChild).toHaveStyle({ color: theme.colors.white });
-	}); */
+		const textComponent = screen.getByText('Children');
+		expect(textComponent).toMatchSnapshot();
+	});
 });

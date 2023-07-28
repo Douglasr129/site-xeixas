@@ -22,6 +22,7 @@ type Story = StoryObj<typeof MenuNav>;
 export const Light: Story = {
 	args: {
 		Listlinks: Links,
+		darkMode: false,
 	},
 	parameters: {
 		backgrounds: {
@@ -32,6 +33,7 @@ export const Light: Story = {
 export const Dark: Story = {
 	args: {
 		Listlinks: Links,
+		darkMode: true,
 	},
 	parameters: {
 		backgrounds: {

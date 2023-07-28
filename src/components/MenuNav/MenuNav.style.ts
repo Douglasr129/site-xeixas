@@ -1,22 +1,29 @@
 /* eslint-disable prettier/prettier */
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 type StyleProps = {
-	darkMode?: boolean; // Use 'darkMode' como propriedade CSS
+	$darkMode?: boolean; // Use 'darkMode' como propriedade CSS
 };
 
-export const Container = styled.a<StyleProps>`
-  ${({ theme, darkMode }) => {
-		return css`
-      padding: 1rem;
-      margin: 1rem;
-      text-decoration: none;
-      color: ${darkMode ? theme.colors.white : theme.colors.dark};
-      text-align: center;
-
-      &:hover {
-        border-bottom: solid 0.2rem ${theme.colors.secondary};
-      }
-    `;
-	}}
+export const Container = styled.div<StyleProps>`
+	background: ${(props) =>
+		props.$darkMode ? props.theme.colors.white : props.theme.colors.dark};
+	margin: 0;
+`;
+export const Ul = styled.ul<StyleProps>`
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0;
+	justify-content: center;
+	padding: ${(props) => props.theme.paddings.xsmall};
+	@media ${(props) => props.theme.medias.tablet} {
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-content: center;
+	}
+`;
+export const Li = styled.li<StyleProps>`
+	padding:${(props) => props.theme.paddings.small};
 `;
