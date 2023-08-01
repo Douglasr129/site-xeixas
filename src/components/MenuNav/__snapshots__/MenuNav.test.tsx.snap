@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Links /> should render in dark mode 1`] = `
+.c0 {
+  background: #FFFFFF;
+  margin: 0;
+}
+
+.c1 {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  justify-content: center;
+  padding: 0.8rem;
+}
+
+.c2 {
+  padding: 1.6rem;
+}
+
+.c3 {
+  padding: 0.8rem;
+  margin: 0.8rem;
+  text-decoration: none;
+  color: #161421;
+  text-align: center;
+}
+
+.c3:hover {
+  border-bottom: solid 0.2rem #dc143c;
+}
+
+@media (max-width: 768px) {
+  .c1 {
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+}
+
+<div
+  class="c0"
+>
+  <ul
+    class="c1"
+  >
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target1"
+        target="_self"
+      >
+        Link 1
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target2"
+        target="_self"
+      >
+        Link 2
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target3"
+        target="_self"
+      >
+        Link 3
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target4"
+        target="_self"
+      >
+        Link 4
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target5"
+        target="_self"
+      >
+        Link 5
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target6"
+        target="_self"
+      >
+        Link 6
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target7"
+        target="_self"
+      >
+        Link 7
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target8"
+        target="_self"
+      >
+        Link 8
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target9"
+        target="_self"
+      >
+        Link 9
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#target10"
+        target="_self"
+      >
+        Link 10
+      </a>
+    </li>
+  </ul>
+</div>
+`;

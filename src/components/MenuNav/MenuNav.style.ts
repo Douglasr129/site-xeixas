@@ -13,13 +13,12 @@ export const Container = styled.div<StyleProps>`
 export const Ul = styled.ul<StyleProps>`
 	list-style: none;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	margin: 0;
 	justify-content: center;
 	padding: ${(props) => props.theme.paddings.xsmall};
 	@media ${(props) => props.theme.medias.tablet} {
-		flex-direction: column;
+		flex-flow: column wrap;
 		justify-content: space-evenly;
 		align-content: center;
 	}
