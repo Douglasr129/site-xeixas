@@ -9,5 +9,7 @@ export const Container = styled.a`
 	color: inherit;
 	> img {
 		max-height: 3rem;
+		filter:drop-shadow(0.2rem 0.2rem 0px #fff);
+		margin-left: 2rem;
 	}
 `;

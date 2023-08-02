@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import * as Styled from './Logo.style';
 
-interface LogoProps {
+export interface LogoProps {
 	srcImg?: string;
 	text: string;
 	link: string;
