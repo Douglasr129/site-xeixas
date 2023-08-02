@@ -39,19 +39,9 @@ describe('<Links />', () => {
 		);
 	});
 	it('should render in dark mode', () => {
-		renderTheme(<MenuNav Listlinks={mock} darkMode={true} />);
 		const { container } = renderTheme(
 			<MenuNav Listlinks={mock} darkMode={true} />,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
-	/*it('should have snepshot', () => {
-		renderTheme(
-			<Links darkMode={true} link="http://localhost">
-				Children
-			</Links>,
-		);
-		const textComponent = screen.getByText('Children');
-		expect(textComponent).toMatchSnapshot();
-	}); */
 });
