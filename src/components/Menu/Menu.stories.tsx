@@ -7,7 +7,6 @@ const meta: Meta<typeof Menu> = {
 	component: Menu,
 	tags: ['autodocs'],
 	args: {
-		children: 'Menu',
 		links: Links,
 		logoData: {
 			text: 'Logo',
@@ -15,14 +14,28 @@ const meta: Meta<typeof Menu> = {
 			srcImg: 'static/media/public/assets/images/logo.svg',
 		},
 	},
-	argTypes: {
-		children: { type: 'string' },
-	},
 };
 
 export default meta;
 type Story = StoryObj<typeof Menu>;
 
-export const Primary: Story = {
-	args: { children: 'Menu' },
+export const Light: Story = {
+	args: {
+		darkMode: false,
+	},
+	parameters: {
+		backgrounds: {
+			default: 'light',
+		},
+	},
+};
+export const Dark: Story = {
+	args: {
+		darkMode: true,
+	},
+	parameters: {
+		backgrounds: {
+			default: 'dark',
+		},
+	},
 };
