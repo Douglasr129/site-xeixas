@@ -5,7 +5,7 @@ type StyleProps = {
 	$darkMode?: boolean; // Use 'darkMode' como propriedade CSS
 };
 
-export const Container = styled.div<StyleProps>`
+export const Container = styled.nav<StyleProps>`
 	background: ${(props) =>
 		props.$darkMode ? props.theme.colors.white : props.theme.colors.dark};
 	margin: 0;

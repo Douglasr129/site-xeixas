@@ -60,7 +60,8 @@ export const MenuContainer = styled.div<StyleProps>`
 	background: ${(props) =>
 		props.$darkMode ? props.theme.colors.white : props.theme.colors.dark};
 	display: flex;
-	flex-flow: row wrap;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	@media ${(props) => props.theme.medias.tablet} {
 		flex-flow: column wrap;

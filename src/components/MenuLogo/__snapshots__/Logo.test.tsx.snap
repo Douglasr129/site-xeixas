@@ -12,6 +12,8 @@ exports[`<Logo /> should render in dark mode 1`] = `
 
 .c0 >img {
   max-height: 3rem;
+  filter: drop-shadow(0.2rem 0.2rem 0px #fff);
+  margin-left: 2rem;
 }
 
 <a

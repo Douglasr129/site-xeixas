@@ -39,7 +39,7 @@ exports[`<Links /> should render in dark mode 1`] = `
   }
 }
 
-<div
+<nav
   class="c0"
 >
   <ul
@@ -156,5 +156,5 @@ exports[`<Links /> should render in dark mode 1`] = `
       </a>
     </li>
   </ul>
-</div>
+</nav>
 `;
