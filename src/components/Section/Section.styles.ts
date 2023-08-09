@@ -1,10 +1,22 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 type StyleProps = {
-	$backgroundDefault?: boolean;
+	$background?: string;
 };
 export const Container = styled.div<StyleProps>`
-		min-height: 100vh;
-    display: flex;
-    align-items: center;
+	${(props) => {
+		console.log(props.$background);
+		if (props.$background != '') {
+			console.log(props.$background);
+			return css`
+				background-image: url(${props.$background});
+				background-repeat: no-repeat;
+ 			  background-size: 100vw;
+				background-position: center;
+			`;
+		}
+	}}
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
 `;

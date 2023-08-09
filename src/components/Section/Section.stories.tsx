@@ -7,6 +7,7 @@ const meta: Meta<typeof Section> = {
 	tags: ['autodocs'],
 	args: {
 		children: 'Section',
+		background: 'static/media/public/assets/images/cover.jpg',
 	},
 	argTypes: {
 		children: { type: 'string' },
@@ -16,6 +17,9 @@ const meta: Meta<typeof Section> = {
 export default meta;
 type Story = StoryObj<typeof Section>;
 
-export const Primary: Story = {
+export const WithBackground: Story = {
 	args: { children: 'Section' },
+};
+export const WithoutBackground: Story = {
+	args: { children: 'Section', background: '' },
 };

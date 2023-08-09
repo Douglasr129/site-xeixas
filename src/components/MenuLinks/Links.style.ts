@@ -9,7 +9,8 @@ export const Container = styled.a<StyleProps>`
 	padding: ${(props) => props.theme.paddings.xsmall};
 	margin: ${(props) => props.theme.spacings.xsmall};
 	text-decoration: none;
-	color: ${(props) => (props.$darkMode ? props.theme.colors.white : props.theme.colors.dark)};
+	color: ${(props) =>
+		props.$darkMode ? props.theme.colors.white : props.theme.colors.dark};
 	text-align: center;
 
 	&:hover {

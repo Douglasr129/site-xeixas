@@ -4,21 +4,17 @@ import * as Styled from './Section.styles';
 
 interface SectionProps {
 	children: ReactNode;
-	backgroundDefault?: boolean;
+	background?: string;
 	sectionId: string;
 }
 export const Section = ({
 	children,
-	backgroundDefault = false,
+	background = '',
 	sectionId,
 	...props
 }: SectionProps) => {
 	return (
-		<Styled.Container
-			$backgroundDefault={backgroundDefault}
-			id={sectionId}
-			{...props}
-		>
+		<Styled.Container $background={background} id={sectionId} {...props}>
 			<Container>{children}</Container>
 		</Styled.Container>
 	);
