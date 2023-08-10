@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section /> should render a Backgrout image 1`] = `
+.c1 {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+  width: 100%;
+}
+
+.c0 {
+  background-image: url(https://images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: center;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+<div
+  class="c0"
+  id="1"
+>
+  <div
+    class="c1"
+  >
+    Children
+  </div>
+</div>
+`;

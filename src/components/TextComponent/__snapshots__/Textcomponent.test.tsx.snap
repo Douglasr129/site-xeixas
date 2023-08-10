@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextComponent />  1`] = `
+.c0 {
+  color: #FFFFFF;
+}
+
+<div
+  class="c0"
+>
+  Children
+</div>
+`;

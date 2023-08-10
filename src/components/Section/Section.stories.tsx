@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Section } from '.';
+import cover from '../../../public/assets/images/cover.jpg';
 
 const meta: Meta<typeof Section> = {
 	title: 'Example/Section',
@@ -7,7 +8,7 @@ const meta: Meta<typeof Section> = {
 	tags: ['autodocs'],
 	args: {
 		children: 'Section',
-		background: 'static/media/public/assets/images/cover.jpg',
+		background: cover.src,
 	},
 	argTypes: {
 		children: { type: 'string' },

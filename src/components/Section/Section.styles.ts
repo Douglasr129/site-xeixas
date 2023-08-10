@@ -16,6 +16,7 @@ export const Container = styled.div<StyleProps>`
 			`;
 		}
 	}}
+	margin:0;
 	min-height: 100vh;
 	display: flex;
 	align-items: center;

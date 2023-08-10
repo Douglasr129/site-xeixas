@@ -35,6 +35,11 @@ export const Container = styled.h1<StyleProps>`
 				font-size: ${props.theme.fonts.sizes.medium};
 			`;
 			}
+			case 'xsmall': {
+				return css`
+				font-size: ${props.theme.fonts.sizes.small};
+			`;
+			}
 		}
 	}};
 	text-transform: ${(props) => (props.$uppercase ? 'uppercase' : 'none')}
