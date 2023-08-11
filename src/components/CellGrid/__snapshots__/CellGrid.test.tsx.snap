@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CellGrid /> should rende elemnets HTML 1`] = `
+.c0 h2 {
+  margin-bottom: 0;
+}
+
+.c0>h3 {
+  margin-top: 0;
+  margin-left: 5rem;
+}
+
+.c1 {
+  color: #161421;
+  font-size: 3.2rem;
+  text-transform: none;
+}
+
+.c2 {
+  color: #161421;
+  font-size: 1.6rem;
+  text-transform: none;
+}
+
+.c3 {
+  color: #161421;
+}
+
+<div
+  class="c0"
+>
+  <h2
+    class="c1"
+  >
+    Teste
+  </h2>
+  <h3
+    class="c2"
+  >
+    SupTeste
+  </h3>
+  <div
+    class="c3"
+  >
+    Text exemple
+  </div>
+</div>
+`;

@@ -6,24 +6,28 @@ import { TextComponent } from '../TextComponent';
 interface CellGridProps {
 	title: ReactNode;
 	subtitle?: ReactNode;
-	text: string;
+	text?: string;
 	darkMode?: boolean;
 }
 export const CellGrid = ({
 	title,
-	subtitle,
-	text,
-	darkMode,
+	subtitle = '',
+	text = '',
+	darkMode = false,
 	...props
 }: CellGridProps) => {
+	const sub = subtitle ? true : false;
 	return (
-		<Styled.Container {...props}>
+		<Styled.Container $subtitle={sub} {...props}>
 			<Heading darkMode={darkMode} size="medium" as="h2">
 				{title}
 			</Heading>
-			<Heading darkMode={darkMode} size="xsmall" as="h3">
-				{subtitle}
-			</Heading>
+			{!!subtitle && (
+				<Heading darkMode={darkMode} size="xsmall" as="h3">
+					{subtitle}
+				</Heading>
+			)}
+
 			<TextComponent darkMode={darkMode} Text={text} />
 		</Styled.Container>
 	);

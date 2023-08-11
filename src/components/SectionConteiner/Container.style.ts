@@ -6,6 +6,6 @@ type StyleProps = {
 export const Container = styled.div<StyleProps>`
     max-width: 120rem;
     margin: 0 auto;
-    padding: ${(props) => props.theme.spacings.large};
+    padding: 0;
 		width: 100%;
 `;
