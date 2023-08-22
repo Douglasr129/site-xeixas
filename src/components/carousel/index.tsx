@@ -1,16 +1,16 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { ReactNode, useState } from 'react';
-import * as Styled from './carousel.styles';
+import { ReactNode, useState, useEffect, useCallback } from 'react';
+import * as Styled from './Carousel.styles';
 import { Section } from '../Section';
 import { ArrowLeft } from '@styled-icons/material-outlined/ArrowLeft';
 import { ArrowRight } from '@styled-icons/material-outlined/ArrowRight';
 
-interface carouselProps {
+interface CarouselProps {
 	children: ReactNode[];
 	sectionId: string;
 }
 const itemsPerPage = 1; // Número de itens por página
-export const carousel = ({ children = [], sectionId }: carouselProps) => {
+export const Carousel = ({ children = [], sectionId }: CarouselProps) => {
 	const [currentPage, setCurrentPage] = useState(1);
 
 	const indexOfLastItem = currentPage * itemsPerPage;
@@ -19,12 +19,15 @@ export const carousel = ({ children = [], sectionId }: carouselProps) => {
 
 	const totalPages = Math.ceil(children.length / itemsPerPage);
 
-	const handlePageChange = (pageNumber: number) => {
-		if (pageNumber > totalPages) {
-			pageNumber = 1;
-		}
-		setCurrentPage(pageNumber);
-	};
+	const handlePageChange = useCallback(
+		(pageNumber: number) => {
+			if (pageNumber > totalPages) {
+				pageNumber = 1;
+			}
+			setCurrentPage(pageNumber);
+		},
+		[totalPages],
+	);
 	const handlePrevius = (pageNumber: number) => {
 		if (pageNumber < 1) {
 			pageNumber = totalPages;
@@ -37,10 +40,20 @@ export const carousel = ({ children = [], sectionId }: carouselProps) => {
 		);
 		setCurrentPage(pageNumber);
 	};
+	useEffect(() => {
+		const id = setTimeout(() => {
+			handlePageChange(currentPage + 1);
+		}, 5000);
+
+		return () => clearTimeout(id);
+	}, [currentPage, handlePageChange]);
 	return (
 		<Section sectionId={sectionId}>
 			<Styled.Container>
-				<Styled.sideBar onClick={() => handlePrevius(currentPage - 1)}>
+				<Styled.sideBar
+					data-testid="btnPrevius"
+					onClick={() => handlePrevius(currentPage - 1)}
+				>
 					<ArrowLeft />
 				</Styled.sideBar>
 				<Styled.content>

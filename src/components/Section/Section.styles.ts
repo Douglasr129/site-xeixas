@@ -19,6 +19,5 @@ export const Container = styled.div<StyleProps>`
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
-	padding-left: ${(props) => props.theme.spacings.large};
-	padding-right: ${(props) => props.theme.spacings.large};
+	padding:0;
 `;
